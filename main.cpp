@@ -52,12 +52,12 @@ void initialize() {
     window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Flappy Bird");
     window.setFramerateLimit(60);
 
-    birdTexture.loadFromFile("bird4bg.png");
+    birdTexture.loadFromFile("./images/bird4bg.png");
     birdSprite.setTexture(birdTexture);
     birdSprite.setPosition(WINDOW_WIDTH / 4, WINDOW_HEIGHT / 2);
     birdVelocity = 0.0f;
 
-    if (!backgroundTexture.loadFromFile("background.png")) {
+    if (!backgroundTexture.loadFromFile("./images/background.png")) {
         // Handle error if the background image failed to load
     }
     backgroundSprite.setTexture(backgroundTexture);
@@ -146,7 +146,7 @@ void render() {
         window.draw(backgroundSprite);
 
         sf::Font font;
-        if (!font.loadFromFile("arial.ttf")) {
+        if (!font.loadFromFile("./Arial/arial.ttf")) {
             // Handle error if the font failed to load
         }
 
@@ -184,7 +184,7 @@ void render() {
         window.draw(birdSprite);
 
         sf::Font font;
-        if (!font.loadFromFile("arial.ttf")) {
+        if (!font.loadFromFile("./Arial/arial.ttf")) {
             // Handle error if the font failed to load
         }
 
